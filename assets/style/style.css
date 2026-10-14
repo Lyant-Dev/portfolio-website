@@ -648,16 +648,16 @@ footer p {
     backdrop-filter: none;
   }
   .navbar-container .navbar-menu {
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem !important;
-    position: absolute;
     height: 100vh;
     width: 250px;
     top: 0;
     right: 0;
-    padding: 5rem 1.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
     background: var(--main-color);
     transform: translateX(100%);
@@ -670,7 +670,6 @@ footer p {
     z-index: 1000;
   }
   .navbar-menu.active {
-    display: flex;
     transform: translateX(0);
   }
   .navbar-toggle.active .bar:nth-child(2) {
@@ -709,6 +708,9 @@ footer p {
   }
 }
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .home {
     width: 100%;
     max-width: 580px;
@@ -863,6 +865,9 @@ footer p {
   }
 }
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar-container {
     padding: 0 1rem;
   }
