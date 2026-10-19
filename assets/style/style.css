@@ -26,6 +26,7 @@ body {
   min-height: 100vh;
   background-color: var(--secondary-color);
   overflow-x: hidden;
+  text-wrap: wrap;
 }
 /* ======== NAVBAR ======== */
 .navbar {
@@ -753,6 +754,9 @@ footer p {
     grid-template-columns: 1fr;
   }
   .about-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 1rem;
     margin: 2rem auto;
   }
   .about img {
@@ -770,6 +774,8 @@ footer p {
   .about-article ul,
   .tools ul {
     font-size: 0.65rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   .tools ul img {
     width: 20px;
@@ -778,41 +784,19 @@ footer p {
   }
   .timeline {
     width: 100%;
-    padding-left: 2rem;
-  }
-  .experience-timeline {
-    max-width: 400px;
-  }
-  .timeline {
-    position: relative;
-    width: min(100%, 920px);
-    margin: 0 auto;
+    padding-left: 0;
   }
   .timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    left: 105px;
-    background: var(--paragraph-color-dark);
+    left: 20px;
   }
-
-  .timeline-item {
-    width: 100%;
-    margin: 1rem auto;
-    margin-left: 4.65rem;
-    padding-right: 0;
-    padding-left: 2rem;
-  }
+  .timeline-item,
   .timeline-item:nth-child(even) {
-    margin-left: 4.65rem;
-    padding-right: 0;
-    padding-left: 2rem;
+    width: 100%;
+    margin: 1rem 0;
   }
   .timeline-dot,
   .timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
+    left: 13px;
     right: auto;
   }
   .timeline-item h3 {
@@ -909,9 +893,6 @@ footer p {
     font-weight: 500;
     letter-spacing: 0.001rem;
   }
-  .about-content {
-    max-width: 380px;
-  }
   .about-content h2 {
     font-size: 1.25rem;
     margin: 0 auto;
@@ -924,45 +905,6 @@ footer p {
   .about img {
     width: 180px;
     height: 180px;
-  }
-  .timeline {
-    width: 100%;
-    padding-left: 2rem;
-  }
-  .experience-timeline {
-    max-width: 400px;
-  }
-  .timeline {
-    position: relative;
-    width: min(100%, 920px);
-    margin: 0 auto;
-  }
-  .timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    left: 75px;
-    background: var(--paragraph-color-dark);
-  }
-
-  .timeline-item {
-    width: 100%;
-    margin: 1rem auto;
-    margin-left: 2.8rem;
-    padding-right: 0;
-    padding-left: 2rem;
-  }
-  .timeline-item:nth-child(even) {
-    margin-left: 2.8rem;
-    padding-right: 0;
-    padding-left: 2rem;
-  }
-  .timeline-dot,
-  .timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
-    right: auto;
   }
   .timeline-item h3 {
     margin-left: 0;
